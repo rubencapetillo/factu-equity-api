@@ -20,6 +20,10 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
         ])->assignRole('Admin');
 
-        User::factory(3)->create();
+        User::create([
+            'name' => 'Arthur FLeck',
+            'email' => 'afleck@email.com',
+            'password' => Hash::make('password'),
+        ])->assignRole('Collaborator');
     }
 }
